@@ -1,0 +1,85 @@
+Lab 1: System Intro
+Activity 1: questions1.txt, warning.c : 30 points total
+Name: <<< YOUR NAME HERE >>>
+
+1. When you first log in, what is the absolute path of your home directory?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+/home/stu13/s3/mrc1613
+
+2. What command will list the contents of your current
+working directory, so that it shows the difference between
+files and directories without descending into any directories?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+ls
+
+3. What command would you use to change your working directory from
+your home directory to the existing subdirectory Courses/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+cd Courses
+
+4. Within the Courses/ subdirectory, what command would you use to
+create the subdirectory csci243/?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+mkdir csci243
+
+5. When warning.c is compiled as: 
+        gcc -o warning warning.c
+    There is no indication of any warnings/problems, but there are issues.
+    
+    a.) What compiler flags are used to enable the display of warnings?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	:  2 points
+-Wall -Wextra -pedantic
+    b.) In your own words, explain all warnings from compiling warning.c
+	with the recommended compilation options.
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	:  4 points
+
+unused variable b warning can be fixed by removing b. 
+
+control reaches end of non void function can both be solved by making the function return what b used to be equal to. 
+
+ISO C forbids zero size array 'z' can be fixed by deleting z, the function is only suppose to print 1 line so it doesn't make sense for it to exist. 
+
+x is uninitialized - I changed this to int x = 1918; so that x+y would equal 2018 and x would be initialized  
+
+ 
+    c.) Fix warning.c so it compiles without warning and runs correctly to
+	produce the output specified in the code documentation.
+
+	(Your answer is the submitted code.)
+	: 10 points
+    
+    d.) There is a 'super-picky' warning flag; what is it and what problem
+	does it catch in warning.c?
+
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	:  1 points
+	
+I'm guessing this question is about the 0 size array, it's because in C arrays must have memory allocated to them when they're initialized. 
+
+6. What compiler flag compiles C programs using the ISO C99 standard?
+
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+-std=c99
+   
+7. Put the four steps of compilation process into their proper order from
+first to last.
+
+    A. Link
+    B. Assemble
+    C. Preprocess 
+    D. Compile
+    
+    <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+
+    1. Preprocess
+    2. compile
+    3. assemble
+    4. linking
